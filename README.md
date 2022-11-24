@@ -9,7 +9,8 @@ The main difference from this final product and the earlier handed in versions i
 
 # note:
 Since the IFC files we have looked at have defined its parameters differently and in different locations, we have made our code to specifically work for the ‘Duplex A’, to illustrate how the work tool should be utilized. This means that making sure materials and structural element properties are defined properly in IFCs would require a code that is simpler, quicker, and useable for any IFC file.
-   
-![Alt text](Images/Skjermbilde 2022-11-24 kl. 08.51.44.png?raw=true "Example of information missing or misplaced")
+
+![Alt text](/../<branch name>/Images/Skjermbilde 2022-11-24 kl. 08.51.44.png?raw=true "Optional Title")
+![Alt text](?raw=true "Example of information missing or misplaced")
 
  
