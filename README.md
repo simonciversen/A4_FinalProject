@@ -23,9 +23,11 @@ The usecase for the tool states that properties from the IFC will be extracted, 
 ---
 
 ## How it works
+>
  * Count spesific IFC by name (IfcWall)
  * Extraction of only loadbearing elements
  * Extracting element properties
+>
  * Matching price data with spesific element type
  * Create CSV for each elements
 
