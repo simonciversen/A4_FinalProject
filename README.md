@@ -41,17 +41,17 @@ The work tool essentially works in the five different parts described above. The
 
 NB! This code is only an example of how the work tool could be utilized, choosing price data and material properties that make approximate calculations of the cost of each bulding element. The 'total price' extracted from this model will therefore not be realistic or usable as a realistic cost estimate. Each extracted element has spesifically definded properties in the IFC model, and below is a description of how the code is creates the desired output for each elements in the model Duplex_A_20110907.ifc. 
 
-### Beams:
+#### Beams:
 For the beams in the ifc model the work tool differentiates in both which type of material (Steel or Concrete) and what thickness the beams are. Since the MOLIO price data has a limited number of beams with a spesific descriptions, we have chosen the MOLIO elements that fit the IFC elements the best. 
 
 
-### Walls:
+#### Walls:
 When building the code for extracting (part1) the walls we encountered some challenges due to the fact that all walls in the IFC model were quite poorly categorised. The biggest issue was that part of the foundation was classified as IfcWallStandardCase, same as all the other walls in the model. To make the work tool usable we worked around this problem by defining walls below ground (```BaseConstrain = T/FDN```) in a certain price class and walls above as another (read 'note'). Another problem with the model was that none of 1. and 2. floor walls were defined as loadbearing even though they were designed to be loadbearing. That makes all the walls extracted from the model part of the external and internal foundation of the structure, eventhough the code is able to perform calculations for walls on all levels. The wall materials are catergorized into three different categories, which are then categorised into different thicknesses.
 
-### Slabs:
+#### Slabs:
 The model has differentiated between the loadbrearing slabs and the finishes of the model. That being said it has classified all horisontal components as being loadbearing, meaning such as ceramic floor finishes are also defined as loadbearing. We have taken this into account and only extracted the three structural categorial components present in the model and categorized each material with thickness. 
 
-### Columns
+#### Columns
 For every extracted element, if the count of the below 1, the code will pick up on this and display a message saying there are no 'element' in the model. Such is the case for columns.
 
 
