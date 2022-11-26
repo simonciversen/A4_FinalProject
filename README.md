@@ -54,8 +54,6 @@ The model has differentiated between the loadbrearing slabs and the finishes of 
 #### Columns
 For every extracted element, if the count of the below 1, the code will pick up on this and display a message saying there are no 'element' in the model. Such is the case for columns.
 
-
-
 A brief example of how the output data could be visualized:
 
 <img width="966" alt="Skjermbilde 2022-11-24 kl  10 49 39" src="https://user-images.githubusercontent.com/113243733/203752402-c1bff2c4-9043-4c74-b6f3-173f1bbe1936.png">
