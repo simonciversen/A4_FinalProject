@@ -10,13 +10,18 @@ After discussing our usecase and its applicability in the industry with the two 
 Eventhough the overall goal of the work tool is still the same as before, because of the changes made, the work tool would be especially helpful in the financial analytics of the contractors building plans. The tool will assist in evaluating where the cost of the main structure has its largest potential of cost cut.  
 
 # Description of The Process & Usecase
-The usecase for the tool states that properties from the IFC will be extracted, matched with corresponding price data, and checked if is satisfactory (see diagram below). To be clear, the tool will not on its own check if costs are satisfactory, because doing so depends on the budget of the contracor among other things. The usecase describes with what intention the work tool was made. The work tool on its own takes part in calculating costs, to ensure that the expenses do not exceed the budget. 
+The usecase for the tool states that properties from the IFC will be extracted, matched with corresponding price data, and checked if is satisfactory (see diagram below). To be clear, the tool will not on its own check if costs are satisfactory, because doing so depends on the budget of the contracor among other things. The usecase describes with what intention the work tool was made. The work tool itself takes part in the extraction of the right information, and the calculations of costs. 
 
 ![Alt text](Images/diagram.svg)
 
 # How it works
-The work tool works in four different part. The first part consists of is using IfcOpenshell attributes  .byType and RelDefinesByProperties to extract both the materials and the material quantities required by the MOLIO JSON file. Before the extraction the tool checks that all elements being extracted are defined as LoadBearing = True, so that as the use case states, we calculate the estimated cost for the main structural elements of the building. The second part is categorizing which materials and quantitative properties define the specific element and the third is linking it up to the price fitting that specific description. Fourth and lastly the code creates the CSV files, that you could use directly to visualizing costs, and create analysis. 
-The main difference from this final product and the earlier handed in versions is that the scope of the work tool is narrower, making it more specific, but also more detailed. 
+* Count spesific IFC by name (IfcWall)
+* Extraction of only loadbearing elements
+* Extracting element properties
+* Matching price data with spesific element type
+* Create CSV for each elements
+
+The work tool essentially works in the five different parts described above. The first parts consists of is using IfcOpenshell attributes  .byType and RelDefinesByProperties to extract both the materials and the material quantities required by the MOLIO JSON file. Before the extraction the tool checks that all elements being extracted are defined as LoadBearing = True, so that as the use case states, we calculate the estimated cost for the main structural elements of the building. Next, the work tool will categorize which materials and quantitative properties define the specific element and linking it up to the price fitting that specific description. Lastly the code creates the CSV files, that you could use directly to visualizing costs, and create analysis. 
 
 A brief example of how the output data could be visualized:
 
