@@ -31,10 +31,10 @@ The usecase for the tool states that properties from the IFC will be extracted, 
 
 ### Beams:
 For the beams in the ifc model the work tool differentiates in both which type of material (Steel or Concrete) and what thickness the beams are. Since the MOLIO price data has a limited number of beams with a spesific descriptions, we have chosen the MOLIO elements that fit the IFC elements the best. 
-It is worth noting that for every property extracted in all bulding elements, ``` LoadBreaing = True ```
+It is worth noting that for every property extracted in all bulding elements, ``` LoadBeaing = True ```
 
 ### Walls:
-When bulding the code for the walls we encountered some problems due to the fact that all walls in the IFC were quite poorly categorised. The biggest problem was that part of the foundation was classified as IfcWallStandardCase, same ass all the other walls in the model. To make the work tool usable we worked around this problem by defining walls below ground (baseconstrain = T/FDN) in a certain price class and walls above as another (read 'note'). Another problem with the model was that none of 1. and 2. floor walls were defined as loadbearing even though they were designed to be loadbearing. That makes all the walls extracted from the model part of the external and internal foundation of the structure, eventhough the code is able to perform calculations for walls on all levels. The wall materials are catergorized into three different categories, which are then categorised into different thicknesses.
+When bulding the code for the walls we encountered some problems due to the fact that all walls in the IFC were quite poorly categorised. The biggest problem was that part of the foundation was classified as IfcWallStandardCase, same ass all the other walls in the model. To make the work tool usable we worked around this problem by defining walls below ground ```baseconstrain = T/FDN``` in a certain price class and walls above as another (read 'note'). Another problem with the model was that none of 1. and 2. floor walls were defined as loadbearing even though they were designed to be loadbearing. That makes all the walls extracted from the model part of the external and internal foundation of the structure, eventhough the code is able to perform calculations for walls on all levels. The wall materials are catergorized into three different categories, which are then categorised into different thicknesses.
 
 ### Slabs:
 
