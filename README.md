@@ -28,8 +28,10 @@ The usecase for the tool states that properties from the IFC will be extracted, 
 > * Extraction of only loadbearing elements
 > * Extracting element properties
 >
- * Matching price data with spesific element type
- * Create CSV for each elements
+>
+> * Matching price data with spesific element type
+> * Create CSV for each elements
+> 
 
 ### Beams:
 For the beams in the ifc model the work tool differentiates in both which type of material (Steel or Concrete) and what thickness the beams are. Since the MOLIO price data has a limited number of beams with a spesific descriptions, we have chosen the MOLIO elements that fit the IFC elements the best. 
