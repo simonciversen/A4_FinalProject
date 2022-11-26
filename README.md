@@ -1,5 +1,8 @@
 # Changes
-After discussing our usecase and its applicability in the industry with the two representatives from Niras, we decided that to make our work tool more usefull, we had to create CSVs, where the name, type, quantity and price of each bulding element were displayed. This output will make categorizing the prices easier, and contractors will quickly be able to make calculations and decisions on which parts of the bulding are the largest cost drivers. The main difference from this final product and the earlier handed in versions is that the scope of the work tool is narrower, making it more specific, but also more detailed. This means extracting more infomation from the IFC model, to create more precise cost estimates.
+* Creating usable CSVs
+* More narrow scope,only focus on foundation, beams, columns, slabs and walls
+
+After discussing our usecase and its applicability in the industry with the two representatives from Niras, we decided that to make our work tool more usefull, we had to create CSVs, where the name, type, quantity and price of each bulding element were displayed. This output will make categorizing the prices easier, and contractors will quickly be able to make calculations and decisions on which parts of the bulding are the largest cost drivers. Another difference from this final product and the earlier handed in versions is that the scope of the work tool is narrower, making it more specific, but also more detailed. This means extracting more infomation from the IFC model, to create more precise cost estimates.
 
 # Goal
 * To give a cost estimate of the main structural elements of a project at an early design stage.
