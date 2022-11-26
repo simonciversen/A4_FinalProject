@@ -23,12 +23,14 @@ The usecase for the tool states that properties from the IFC will be extracted, 
 ---
 
 ## How it works
+First part
 >
 > * Count spesific IFC by name (IfcWall)
 > * Extraction of only loadbearing elements
 > * Extracting element properties
 >
 
+Second part
 >
 > * Matching price data with spesific element type
 > * Create CSV for each elements
@@ -42,6 +44,7 @@ It is worth noting that for every property extracted in all bulding elements, ``
 When bulding the code for the walls we encountered some problems due to the fact that all walls in the IFC were quite poorly categorised. The biggest problem was that part of the foundation was classified as IfcWallStandardCase, same ass all the other walls in the model. To make the work tool usable we worked around this problem by defining walls below ground ```BaseConstrain = T/FDN``` in a certain price class and walls above as another (read 'note'). Another problem with the model was that none of 1. and 2. floor walls were defined as loadbearing even though they were designed to be loadbearing. That makes all the walls extracted from the model part of the external and internal foundation of the structure, eventhough the code is able to perform calculations for walls on all levels. The wall materials are catergorized into three different categories, which are then categorised into different thicknesses.
 
 ### Slabs:
+
 
 
 The work tool essentially works in the five different parts described above. The first parts consists of is using ```IfcOpenshell``` attributes  ```.byType```, ```.ÌsDefinedBy```,  ```.RelatingPropertyDefinition``` and ```RelDefinesByProperties``` to extract both the materials and the material quantities required by the MOLIO JSON file. Before the extraction the tool checks that all elements being extracted are defined as ```LoadBearing = True```, so that as the use case states, we calculate the estimated cost for the main structural elements of the building. Next, the work tool will categorize which materials and quantitative properties define the specific element and linking it up to the price fitting that specific description. Lastly the code creates the CSV files, that you could use directly to visualizing costs, and create analysis. 
