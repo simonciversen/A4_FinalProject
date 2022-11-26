@@ -16,7 +16,7 @@ Eventhough the overall goal of the work tool is still the same as before, becaus
 ---
 
 ## Description of The Process & Usecase
-The usecase for the tool states that properties from the IFC will be extracted, matched with corresponding price data, and checked if is satisfactory (see diagram below). To be clear, the tool will not on its own check if costs are satisfactory, because doing so depends on the budget of the contracor among other things. The BPMN below describes with what intention the work tool was made. The work tool itself takes part in the extraction of the right information, and the calculations of costs. 
+The usecase for the tool states that properties from the IFC will be calculated, matched with corresponding price data, and checked if is satisfactory (see diagram below). To be clear, the tool will not on its own check if costs are satisfactory, because doing so depends on the budget of the contracor among other things. The BPMN below describes with what intention the work tool was made. The work tool itself takes part in the extraction of the right information, and the calculations of costs. 
 
 ![Alt text](Images/diagram.svg)
 
