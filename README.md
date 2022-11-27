@@ -1,5 +1,6 @@
-NB! Input file was too big to upload, remember to unzip before using the work tool.
-
+>
+>NB! Input file was too big to upload, remember to unzip before using the work tool.
+>
 # A4 Use Case: Cost Estimation
 
 ## Goal
@@ -16,9 +17,9 @@ Another difference in this final product compared to the earlier handed in versi
 
 ---
 
-## Description of Worktool & Use Case
+## Description of Work tool & Use Case
 
-The BPMN diagram demonstrates our worktool. After loading a architectural model we identify all loadbearing elements in the building and extract walls, beams, columns, slabs and footings. We then extract the elements material properties such as length/area/width and classify each element based on these properties. By matching each classified element with a price category from the Molio cost data, the worktool calculates price estimates and exports csv. files for each building element category. 
+The BPMN diagram demonstrates our work tool. After loading a architectural model we identify all loadbearing elements in the building and extract walls, beams, columns, slabs and footings. We then extract the elements material properties such as length/area/width and classify each element based on these properties. By matching each classified element with a price category from the Molio cost data, the worktool calculates price estimates and exports csv. files for each building element category. 
 
 These cost estimates in the form of csv. files are intended to be used by a contracting firm calculating on a project for a client. By running our work-tool on a architectural model given to them from a client, or a model they have made themselves, they will have a visual representation in form of a spreadsheet with building elements and corresponding prices, as well as plots and graphs displaying where most of the cost for the building is located. This cost information for the building is then intended to be used to make necessary changes based on budget, and give a basis for exploring alternative materials and building layouts.  For example if steel prices have risen recently, and by running the work-tool it becomes clear that steel takes a bigger part of the  budget than expected, the contractor can decide to use a substitute material in the further design process. 
 ![Alt text](Images/diagram.svg)
