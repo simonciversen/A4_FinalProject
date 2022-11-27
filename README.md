@@ -50,12 +50,16 @@ NB! This code is only an example of how the work tool could be utilized, choosin
 #### Beams:
 For the beams in the IFC model the work tool differentiates in both which type of material and what thickness the beams are. Since the MOLIO price data has a limited number of beams with a spesific descriptions, we have chosen the MOLIO elements that fit the IFC elements the best. 
 
+#### Footings:
+Unlike the rest of the IFC elements IfcFooting does not contain the atribute ```LoadBearing = True```. Being that all footings are loadbearing we have assumed this to be true for the 'Duplex A' model aswell. Another assumtpion is that all footings are made from concrete, so the code only differentiates pricing with the thickness.
+
 
 #### Walls:
 When building the extraction part of the code for the walls we encountered some challenges due to the fact that all walls in the IFC model were quite poorly labeled. The biggest issue was that part of the foundation was classified as IfcWallStandardCase, same as all the other walls in the model. To make the work tool usable we worked around this problem by defining walls below ground (```BaseConstrain = T/FDN```) in a certain price class and walls above as in another (read 'note'). Another problem with the model was that none of 1. and 2. floor walls were defined as loadbearing even though they were designed to be loadbearing. That makes all the walls extracted from the model part of the external and internal foundation of the structure, eventhough the code is able to perform calculations for walls on all levels. The wall materials are catergorized into three different material categories, which are then categorised into different thicknesses.
 
 #### Slabs:
 The model has differentiated between the loadbearing slabs and the floor finishes in the model. That being said it has classified all horizontal components relating to the slabs as being loadbearing, meaning such as ceramic floor finishes are also defined as loadbearing. We have taken this into account and only shown the three structural categorical components present in the model and differentiated each material with their thickness. 
+
 
 #### Columns:
 If the count of each extracted element type is below one, the code will notice and display a message saying there are no 'elements' in the model. Such is the case for columns.
