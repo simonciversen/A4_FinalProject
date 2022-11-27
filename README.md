@@ -1,3 +1,5 @@
+NB! Input file was too big to upload, remember to unzip before using the work tool.
+
 # A4 Use Case: Cost Estimation
 
 ## Goal
